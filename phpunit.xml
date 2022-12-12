@@ -1,5 +1,0 @@
-<testsuites>
-    <testsuite name="My app teast config">
-        <directory suffix="Test.php">tests</directory>
-    </testsuite>
-<testsuites>
