@@ -1,10 +1,12 @@
 <?php
+
 require __DIR__.'/../tests/bootstraptest.php';
+
 return
 [
     'paths' => [
-        'migrations' => '%%PHINX_CONFIG_DIR%%/db/migrations',
-        'seeds' => '%%PHINX_CONFIG_DIR%%/db/seeds'
+        'migrations' => '%%PHINX_CONFIG_DIR%%/../db/migrations',
+        'seeds' => '%%PHINX_CONFIG_DIR%%/../db/seeds'
     ],
     'environments' => [
         'default_migration_table' => 'migrations',
@@ -17,7 +19,7 @@ return
             'pass' => $_ENV['DB_PASS'],
             'port' => '3306',
             'charset' => 'utf8mb4',
-        ]
+        ],
     ],
     'version_order' => 'creation'
 ];

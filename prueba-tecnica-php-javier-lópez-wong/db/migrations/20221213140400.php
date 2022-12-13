@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 use Phinx\Migration\AbstractMigration;
 
-final class V20221212065247 extends AbstractMigration
+final class V20221213140400 extends AbstractMigration
 {
     /**
      * Change Method.
@@ -23,7 +23,7 @@ final class V20221212065247 extends AbstractMigration
         $table->addColumn('nombre', 'string', ['length' => 100]);
         $table->addColumn('email', 'string', ['length' => 100]);
         $table->addColumn('contrasena', 'string', ['length' => 100]);
-
+        $table->addIndex(['nombre', 'email','contrasena'], ['unique' => true]);
         $table->create();
     }
 }
